@@ -1,0 +1,26 @@
+[Unit]
+Description=Bamboo's distributed currency daemon
+After=network.target
+
+[Service]
+User=bamboo
+Group=bamboo
+
+Type=forking
+PIDFile=/var/lib/bambood/bambood.pid
+
+ExecStart=/usr/bin/bambood -daemon -pid=/var/lib/bambood/bambood.pid \
+          -conf=/etc/bamboo/bamboo.conf -datadir=/var/lib/bambood
+
+ExecStop=-/usr/bin/bamboo-cli -conf=/etc/bamboo/bamboo.conf \
+         -datadir=/var/lib/bambood stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

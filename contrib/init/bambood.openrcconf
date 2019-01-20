@@ -1,0 +1,26 @@
+# /etc/conf.d/bambood: config file for /etc/init.d/bambood
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/bamboo/bamboo.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/bambood"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/bambood.pid"
+
+# Where to write bambood data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/bambood"
+
+# User and group to own bambood process
+#BITCOIND_USER="bamboo"
+#BITCOIND_GROUP="bamboo"
+
+# Path to bambood executable
+#BITCOIND_BIN="/usr/bin/bambood"
+
+# Nice value to run bambood under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
