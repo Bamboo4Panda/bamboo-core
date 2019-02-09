@@ -29,7 +29,7 @@ packages:
 - "python"
 reference_datetime: "2015-06-01 00:00:00"
 remotes:
-- "url": "https://github.com/CryptoCashBack-Hub/bamboo"
+- "url": "https://github.com/Bamboo4Panda/bamboo-core"
   "dir": "bamboo"
 files: []
 script: |
